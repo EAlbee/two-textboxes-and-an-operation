@@ -7,20 +7,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ILemkeNumbersThingComponent implements OnInit {
 
+  public countDown: number;
+  public stringToReverse: string;
+  public reversedString: string;
+
   constructor() { }
 
+
   ngOnInit() {
+    this.countDown = 5;
   }
 
-  answer = '';
-
-  addNumbers() {
-    this.answer = this.n1 + " cat";
+  public reverseString() {
+    setInterval(() => { if (this.countDown > 0) this.myTimerFunction() }, 1000);
   }
 
-  n1: string = "";
-  n2: string = "";
+  public myTimerFunction() {
+    console.log('My timer function');
+    this.countDown--;
+    if (this.countDown <= 0) {
+      this.reversedString = this.getReversedString(this.stringToReverse);
+      console.log(this.countDown);
+    }
+  }
+
+  public getReversedString(stringToReverse: string) {
+    return stringToReverse.split('').reverse().join('');
+  }
+  
+
+
+
+
 }
 
 
-}
+

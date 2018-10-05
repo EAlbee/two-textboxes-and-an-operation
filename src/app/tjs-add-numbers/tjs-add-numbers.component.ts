@@ -15,7 +15,7 @@ export class TjsAddNumbersComponent implements OnInit {
   answer = '';
 
   addNumbers() {
-    this.answer = this.n1 + " cat";
+    this.answer = this.n1 + this.n2;
   }
 
   n1: string = "";
