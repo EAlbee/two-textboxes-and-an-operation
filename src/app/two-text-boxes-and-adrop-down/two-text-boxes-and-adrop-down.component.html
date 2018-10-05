@@ -1,0 +1,11 @@
+<h3>Tom's Number Addition</h3>
+<input type="number" [(ngModel)]="n1">
+&nbsp; <select ng-model="data.operation">
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select> &nbsp;
+<input type="number" [(ngModel)]="n2">
+&nbsp; <button (click)="addNumbers()">=</button> &nbsp;
+{{ answer }} = {{data.operation}}
