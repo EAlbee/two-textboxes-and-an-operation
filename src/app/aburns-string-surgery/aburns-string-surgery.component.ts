@@ -19,7 +19,7 @@ export class AburnsStringSurgeryComponent implements OnInit {
   spliceStrings() {
     this.finalString = this.firstString.concat(this.secondString);
     this.firstString = this.finalString;
-    
+    this.secondString = "";
   }
 
 }
