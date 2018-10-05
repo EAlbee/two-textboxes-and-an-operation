@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tjs-add-numbers',
-  templateUrl: './tjs-add-numbers.component.html',
-  styleUrls: ['./tjs-add-numbers.component.css']
+  selector: 'app-ilemke-numbers-thing',
+  templateUrl: './ilemke-numbers-thing.component.html',
+  styleUrls: ['./ilemke-numbers-thing.component.css']
 })
-export class TjsAddNumbersComponent implements OnInit {
+export class ILemkeNumbersThingComponent implements OnInit {
 
   constructor() { }
 
@@ -20,4 +20,7 @@ export class TjsAddNumbersComponent implements OnInit {
 
   n1: string = "";
   n2: string = "";
+}
+
+
 }
