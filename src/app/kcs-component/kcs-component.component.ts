@@ -12,4 +12,12 @@ export class KcsComponentComponent implements OnInit {
   ngOnInit() {
   }
 
+  answer = "NO U!";
+
+  shoutPhrase() {
+    this.answer = this.n1.toUpperCase() + " " + this.n2.toUpperCase() + "!";
+  }
+
+  n1: string = "no";
+  n2: string = "u";
 }
