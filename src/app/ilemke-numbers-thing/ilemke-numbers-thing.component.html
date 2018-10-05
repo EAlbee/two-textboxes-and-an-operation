@@ -1,5 +1,7 @@
 <h3>Isaac's String Reverser</h3>
 <input type="string" [(ngModel)]="stringToReverse">
 <span class="countdown" *ngIf="showCountDown">{{ countDown }}</span>
-<button (click)="reverseString()">Reverse This String!</button>
+<button (click)="reverseString()" id="referenceElement">Reverse This String!</button>
 {{ reversedString }}
+
+<div id="popperElement">Woo Hoo!</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+const Popper = require("popper").default;
 
 @Component({
   selector: 'app-ilemke-numbers-thing',
@@ -18,7 +19,19 @@ export class ILemkeNumbersThingComponent implements OnInit {
 
   ngOnInit() {
     this.showCountDown = false;
+    this.setPopup();
   }
+
+
+  public setPopup() {
+    let refElement = document.getElementById("referenceElement");
+    let popElement = document.getElementById("popperElement");
+
+    let popup = new Popper(refElement, popElement, {
+      placement: 'bottom'
+    });
+  }
+  
 
   public reverseString() {
     clearInterval(this.interval);
@@ -45,6 +58,8 @@ export class ILemkeNumbersThingComponent implements OnInit {
   public getReversedString(stringToReverse: string) {
     return stringToReverse.split('').reverse().join('');
   }
+
+
   
 
 
