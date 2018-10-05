@@ -20,6 +20,7 @@ export class AburnsStringSurgeryComponent implements OnInit {
     this.finalString = this.firstString.concat(this.secondString);
     this.firstString = this.finalString;
     this.secondString = "";
+
   }
 
 }
