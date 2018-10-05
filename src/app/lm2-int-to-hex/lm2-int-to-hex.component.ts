@@ -12,20 +12,15 @@ export class Lm2IntToHexComponent implements OnInit {
   ngOnInit() {
     
   }
-
   convertNumbers = () => {
     this.answer1 = parseInt(this.n1, 10).toString(16);
     this.answer2 = parseInt(this.n2, 10).toString(2);
   }
 
  answer1 = "";
-
  answer2 = "";
 
  n1;
  n2;
-
-
-
 
 }
