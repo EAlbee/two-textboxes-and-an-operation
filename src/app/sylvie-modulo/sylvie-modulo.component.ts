@@ -12,4 +12,13 @@ export class SylvieModuloComponent implements OnInit {
   ngOnInit() {
   }
 
+  remainder = 1;
+
+  moduloNumbers() {
+    this.remainder = this.dividend % this.divisor;
+  }
+
+  dividend: number = 3;
+  divisor: number = 2;
+
 }
