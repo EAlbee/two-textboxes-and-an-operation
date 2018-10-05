@@ -12,10 +12,14 @@ export class TjsAddNumbersComponent implements OnInit {
   ngOnInit() {
   }
 
-  answer = 5;
+  answer: string = "";
 
-  addNumbers() {
-    this.answer = this.n1 + this.n2;
+  checkEquality() {
+    if (this.n1 === this.n2) {
+      this.answer = "True";
+    } else {
+      this.answer = "False";
+    }
   }
 
   n1: number = 2;
