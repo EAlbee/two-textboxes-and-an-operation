@@ -10,24 +10,35 @@ export class ILemkeNumbersThingComponent implements OnInit {
   public countDown: number;
   public stringToReverse: string;
   public reversedString: string;
+  public showCountDown: boolean;
+  public interval: any;
 
   constructor() { }
 
 
   ngOnInit() {
-    this.countDown = 5;
+    this.showCountDown = false;
   }
 
   public reverseString() {
-    setInterval(() => { if (this.countDown > 0) this.myTimerFunction() }, 1000);
+    clearInterval(this.interval);
+    this.countDown = 5;
+    this.showCountDown = true;
+    this.interval = setInterval(() => { 
+      if (this.countDown >= 1) {
+        this.myTimerFunction();
+        this.showCountDown = true; 
+      } else {
+        this.showCountDown = false;
+        clearInterval(this.interval);
+      }
+    }, 1000);
   }
 
   public myTimerFunction() {
-    console.log('My timer function');
     this.countDown--;
     if (this.countDown <= 0) {
       this.reversedString = this.getReversedString(this.stringToReverse);
-      console.log(this.countDown);
     }
   }
 
